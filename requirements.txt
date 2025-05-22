@@ -1,0 +1,15 @@
+alembic==1.16.1
+cached-property==2.0.1
+connect==0.2
+Faker==37.3.0
+greenlet==3.2.2
+inflection==0.5.1
+Mako==1.3.10
+MarkupSafe==3.0.2
+mypy_extensions==1.1.0
+psycopg2-binary==2.9.10
+SQLAlchemy==2.0.41
+sqlalchemy-orm==1.2.10
+typing-inspect==0.9.0
+typing_extensions==4.13.2
+tzdata==2025.2
