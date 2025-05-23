@@ -1,17 +1,3 @@
-"""
-Пояснення:
-Імпорти: Імплементуйте ваші моделі в models.py.
-Налаштування бази даних: Змініть DATABASE_URL, якщо потрібно.
-Функції для створення даних:
-create_groups: генерує групи.
-create_teachers: генерує викладачів.
-create_subjects: генерує предмети.
-create_students: генерує студентів з оцінками.
-Функція main: викликає всі функції для заповнення бази даних.
-Запуск:
-Запустіть скрипт, і ваша база даних буде заповнена випадковими даними.
-"""
-
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Float
 from sqlalchemy.orm import relationship
 from .base import Base
@@ -38,8 +24,9 @@ class Teacher(Base):
     __tablename__ = "teachers"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
-    subjects = relationship("Subject", back_populates="teacher")
-    teacher = relationship("Subject", back_populates="teacher")
+    subjects = relationship(
+        "Subject", back_populates="teacher"
+    )  # allows easy navigation between related tables
 
 
 class Subject(Base):

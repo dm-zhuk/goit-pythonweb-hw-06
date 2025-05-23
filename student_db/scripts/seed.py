@@ -1,12 +1,17 @@
 #!/usr/bin/pythonexport PATH=/Library/PostgreSQL/16/bin:$PATH
 # type: ignore
 
+import sys
+import os
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from faker import Faker
 from sqlalchemy.orm import Session
 from models.base import SessionLocal, Base, engine
-from models.models import Group, Student, Teacher, Subject, Grade
+from models.model import Group, Student, Teacher, Subject, Grade
 import random
-from datetime import datetime, timedelta
 
 fake = Faker()
 

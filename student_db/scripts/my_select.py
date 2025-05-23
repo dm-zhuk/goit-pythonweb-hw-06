@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from models.base import SessionLocal
-from models.models import Student, Group, Teacher, Subject, Grade
+from student_db.models.model import Student, Group, Teacher, Subject, Grade
 
 
 def get_db():
